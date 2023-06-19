@@ -1,4 +1,32 @@
-# check the Iranian Iban number
+# 1.Iranian bank account format regex
+
+```
+Regex : /^\d+([\/.-]\d+)*$/
+```
+
+```
+if(preg_match('/^\d+([\/.-]\d+)*$/', $bankAccountNumber)
+{
+    return true;
+}
+
+```
+
+**Example :**
+
+Resalat Bank : 10/6240823/1
+
+Middle East Bank : 1007-11-040-707075053
+
+Mellat Bank : 32.36781275
+
+
+
+# 2. Iranian Iban number regex
+
+```
+Regex : /^[IR]{2}[0-9]{24}$/
+```
 
 ```
 function validateIranIban(string $shebaCode): bool
